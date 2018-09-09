@@ -1,3 +1,6 @@
+  ////////////////////////////
+ //////GLOBAL VARIABLES//////
+////////////////////////////
 float r1 = 100;
 float r2 = 300;
 float m1 = 10;
@@ -27,6 +30,10 @@ canvas.background(0);
 canvas.endDraw();
 }
 void draw(){
+  ///////////////////////////
+ /////PENDULUM EQUATION/////
+///////////////////////////
+
    float num1 = -g * (2 * m1 + m2) * sin(a1);
    float num2 = -m2 * g * sin(a1);
    float num3 = -2 * sin(a1-a2)*m2;
@@ -43,8 +50,12 @@ void draw(){
   den = r2 * (2 * m1 + m2 - m2 *cos(2*a1 - 2 * a2));
 
   float a2_a = (num1 * (num2 + num3 + num4)) / den;
-   
+ ///////////////////////////
+///////////////////////////
   
+ //////////////////////////
+///DRAWING AND UPDATING///
+///////////////////////// 
 //background(255);
 image(canvas,0,0);
 stroke(0);
@@ -98,3 +109,5 @@ py2 = y2;
 px1 = x1;
 py1 = y1;
 }
+ /////////////////
+/////////////////
